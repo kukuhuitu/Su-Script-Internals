@@ -1,0 +1,93 @@
+local FpsLabel = LBL
+local Heartbeat = game:GetService("RunService").Heartbeat
+local LastIteration, Start
+local FrameUpdateTable = { }
+Heartbeat:Connect(HeartbeatUpdate)
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『苏脚本内部版』"; Text ="加载中!不要着急哦!"; Duration = 4; })
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "『苏脚本内部版』"; Text ="欢迎使用苏脚本内部版!"; Duration = 4; })
+
+local ui = loadstring(game:HttpGet("https://raw.githubusercontent.com/kukunb/ui/refs/heads/main/yuepaoneibui.txt"))();        
+local win = ui:new("苏脚本内部")
+--
+local UITab1 = win:Tab("信息",'7734068321')
+
+local about = UITab1:section("信息",false)
+
+about:Toggle("脚本框架变小一点", "", false, function(state)
+        if state then
+        game:GetService("CoreGui")["frosty"].Main.Style = "DropShadow"
+        else
+            game:GetService("CoreGui")["frosty"].Main.Style = "Custom"
+        end
+    end)
+    about:Button("关闭脚本",function()
+        game:GetService("CoreGui")["frosty"]:Destroy()
+    end)
+
+
+about:Label("苏脚本内部")
+about:Label("作者QQ：3417181070")
+about:Label("作者：kuku")
+about:Label("欢迎使用苏脚本内部")
+about:Label("此脚本为内部脚本")
+about:Label("请不要向外透露脚本")
+about:Label("你的注入器:"..identifyexecutor())
+about:Label("你的用户名:"..game.Players.LocalPlayer.Character.Name)
+local UITab3 = win:Tab("内部功能",'7734068321')
+
+local about = UITab3:section("内部功能",true)
+
+about:Button(
+         "战争大亨",function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/JinxTheCatto/Neptune/main/NeptuneHub.lua"))()
+         end)
+         
+about:Button(
+         "宠物模拟器99(要卡密)",function()
+        loadstring(game:HttpGet('https://zaphub.xyz/Exec'))()
+        end)
+
+about:Button(
+         "兵工场",function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubArsenal"))()
+         end)
+
+about:Button(
+         "越狱",function()
+         loadstring(game:HttpGet('http://scripts.projectauto.xyz/AutoRobV5'))()
+         end)
+
+
+about:Button(
+         "竞争对手",function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/Actyrn/Scripts/main/AzureModded"))()
+         end)
+
+about:Button(
+         "兵工场",function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubArsenal"))()
+         end)
+
+local UITab3 = win:Tab("刷钱区",'7734068321')
+
+local about = UITab3:section("刷钱功能",true)
+
+about:Button(
+         "gv刷钱",function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/Marco8643/test/main/green"))()
+         end)
+
+about:Button(
+        "唐县刷钱",function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/Marco8642/science/ok/T%20ang%20County"))()
+         end)
+
+about:Button(
+        "CDID刷钱",function()
+         loadstring(game:HttpGet("https://pan.ly93.cc/f/wL7Xfj/CDID.txt", true))()
+         end)
+
+about:Button(
+        "驾驶帝国",function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Marco8642/science/main/drivingempire", true))()
+         end)
